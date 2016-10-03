@@ -1,2 +1,32 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+h1 {
+  text-align: center;
+}
+
+.hiscreen {
+  text-align: center;
+}
+
+body {
+  background-color: #7F7573;
+  color: #01081C;
+}
+
+// .notebook {
+//   color: #01081C;
+// }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ba5a69;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #ba5a69;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #ba5a69;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: p#ba5a69ink;
+}

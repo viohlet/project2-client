@@ -1,20 +1,253 @@
+
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
 
-      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+  <head>
+    <title> User Stories Wizard </title>
+    <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
+  <body class="wholesite">
+
+<!-- Change Password Modal -->
+    <div class = "topright">
+      <div class= "cambiopass">
+      <button type="button" class="btnstyle" style="float:left" data-toggle="modal"
+      data-target="#cambiopass">Change Password</button>
+        <!-- Modal -->
+        <div id="cambiopass" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+           <div class="modal-content">
+            <!-- Modal content-->
+              <div class="cambiopass-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                  <h4 class="cambiopass-title">Change your password</h4>
+              </div>
+              <div class="cambiopass-body">
+                <form id="change-password">
+                    <!-- <legend>Changeyour Password</legend> -->
+                    <!-- <input type="email" name="credentials[email]" placeholder="Your email"> -->
+                    <input type="password" name="passwords[old]" placeholder="Old Password">
+                    <input type="password" name="passwords[new]" placeholder="New Password">
+                    <input type="submit" name="submit" value="Next">
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+
+      <form id="sign-out">
+      <fieldset>
+      <button type="submit" name="submit" class="btnstyle" style="float:right">Log out</button>
+      </fieldset>
+      </form>
+    </div>
+    <!-- <p style="clear:floats"></p> -->
+
+    <h1>User Stories Wizard</h1>
+
+  <!-- hiscreen DIV -->
+  <!-- Log-in Modal -->
+      <br/>
+      <div class = "hiscreen">
+        <div class= ingresa>
+        <button type="button" id="loginbutton" class="btnstyle" data-toggle="modal"
+        data-target="#ingresa">Log-in</button>
+        <div id="ingresa" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+           <div class="modal-content">
+            <!-- Modal content-->
+              <div class="ingresa-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                  <h4 class="ingresa-title">Hi there,</h4>
+              </div>
+              <div class="ingresa-body">
+                <form id="sign-in" action="process.php" method="POST">
+                  <!-- <fieldset> -->
+                    <!-- <legend>Register</legend> -->
+                    <input type="email" name="credentials[email]" placeholder="Your email">
+                    <input type="password" name="credentials[password]" placeholder="Password">
+                    <input type="submit" name="submit" value="Next">
+                    <!-- <button type="submit" class="btn btn-primary pull-right" name="submit">Sign Up</button> -->
+                  <!-- </fieldset> -->
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+              <!-- <div class="ingresamodal-footer">
+                <button type="button" id="sign-up-button" class="btn btn-default" data-toggle="modal" data-target="#register" data-dismiss="modal">Register</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sign-up Modal -->
+      </br>
+      <div class= register>
+      <button type="button" id="signupbutton" class="btnstyle" data-toggle="modal"
+      data-target="#register">Join</button>
+        <!-- Modal -->
+        <div id="register" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+           <div class="modal-content">
+            <!-- Modal content-->
+              <div class="register-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                  <h4 class="register-title">Welcome!</h4>
+              </div>
+              <div class="register-body">
+                <form id="sign-up" action="process.php" method="POST">
+                  <!-- <fieldset> -->
+                    <!-- <legend>Register</legend> -->
+                    <input type="email" name="credentials[email]" placeholder="Your email">
+                    <input type="password" name="credentials[password]" placeholder="Password">
+                    <input type="password" name="credential[password_confirmation]" placeholder="Confirm your password">
+                    <input type="submit" name="submit" value="Next">
+                  <!-- </fieldset> -->
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of hiscreen -->
+
+    <div id="message"></div>
+
+    <!-- add SETTINGS change password and log out as a nav bar and possibly everything else-->
+
+
+    <!-- </br>
+    <form id="Projects">
+      <fieldset>
+        <button type="submit" name="submit" class="btnstyle">Projects</button>
+      </fieldset>
+    </form> -->
+
+
+    <form class="btn btn-default" type="text">
+      My Projects
+    </form>
+    <button type="button" class="btn btn-warning" aria-label="Left Align" data-toggle="collapse" data-target="#collapseadd" aria-expanded="false" aria-controls="collapseExamples">
+      <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add
+    </button>
+    <button type="button" class="btn btn-warning" aria-label="Left Align" data-toggle="collapse" data-target="#collapseupdate" aria-expanded="false" aria-controls="collapseExample">
+      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Update
+    </button>
+    <button type="button" class="btn btn-warning" aria-label="Left Align" data-toggle="collapse" data-target="#collapsedelete" aria-expanded="false" aria-controls="collapseExample">
+      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete
+    </button>
+    <div class="collapse" id="collapseadd">
+      <div class="well">
+        <form id="addnewtitle">
+          Title <input type="text" placeholder="Add a new title for your project.">
+          <input class="btn btn-default" type="submit" value="Save">
+        </form>
+      </div>
+    </div>
+    <div class="collapse" id="collapseupdate">
+      <div class="well">
+          Update - show index
+          <input class="btn btn-default" type="submit" value="Submit">
+          <!-- ADD A CLASS ID TO CONNECT JS -->
+      </div>
+    </div>
+    <div class="collapse" id="collapsedelete">
+      <div class="well">
+          Warning: Deleting one project will delete all of the user stories contained.
+          Delete - show index
+          <input class="btn btn-default" type="submit" value="Delete">
+          <!-- ADD A CLASS ID TO CONNECT JS -->
+      </div>
+    </div>
+
+
+
+
+  <!-- INDEX ALL HISTORY -->
+  <div id="index"></div>
+
+  <!-- </br>
+  <div class = "actionbtnsprojects">
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+      <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add
+    </button>
+
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Update
+    </button>
+
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remove
+    </button>
+  </div> -->
+
+
+  <!-- </br>
+  <div class= newproject>
+  <button type="button" id="newprojectbutton" class="btnstyle" data-toggle="modal"
+  data-target="#newprojectdata">New Project</button>
+  <div id="newprojectdata" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+     <div class="modal-content">
+      <div class="newproject-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="newproject-title">Title for New User Stories Log</h4>
+        </div>
+        <div class="newproject-body">
+          <form id="new-project" action="process.php" method="POST">
+            <input type="text" placeholder="Enter title">
+            <input type="submit" name="submit" value="Submit">
+          </form>
+        </div>
+        <div class="newprojectmodal-footer">
+        </br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+  <!-- Add -add- modal and also update and delete -->
+  </br>
+  </br>
+  </br>
+  <div class = "notebook">
+    As a <input type="text" placeholder="role">, I want to <input type="text" placeholder="action">,
+    so that/because <input type="text" placeholder="because">.
+  </div>
+
+</br>
+</br>
+  <div class = "actionbtnsuserstories">
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+      <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add
+    </button>
+
+    <!-- <button type="button" class="btn btn-default" aria-label="Left Align">
+      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Update
+    </button> -->
+
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remove
+    </button>
+
+    <button type="button" class="btn btn-default" aria-label="Left Align">
+      <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Save
+    </button>
+  </div>
+</body>
 </html>
