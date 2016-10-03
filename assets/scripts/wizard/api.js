@@ -10,24 +10,24 @@ const newProject = (data) => {
     headers: {
       Authorization: 'Token token=' + app.user.token,
     },
-    data,
+    data: data,
   });
 };
 
-const indexGames = () => {
-  return $.ajax({
-    url: app.host + '/games',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=' + app.user.token,
-    }
-  });
-};
+// const indexProjects = () => {
+//   return $.ajax({
+//     url: app.host + '/projects',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + app.user.token,
+//     }
+//   });
+// };
 
 module.exports = {
   newProject,
   // updateGame,
-  indexGames,
+  // indexProjects,
   // getGameById,
   // historyGames,
   // joinGame,

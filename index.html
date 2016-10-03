@@ -144,9 +144,9 @@
     </form> -->
 
 
-    <form class="btn btn-default" type="text">
+    <h1>
       My Projects
-    </form>
+    </h1>
     <button type="button" class="btn btn-warning" aria-label="Left Align" data-toggle="collapse" data-target="#collapseadd" aria-expanded="false" aria-controls="collapseExamples">
       <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add
     </button>
@@ -159,7 +159,7 @@
     <div class="collapse" id="collapseadd">
       <div class="well">
         <form id="addnewtitle">
-          Title <input type="text" placeholder="Add a new title for your project.">
+          Title <input type="text" name="project[title]" placeholder="New title">
           <button type="submit" name="submit" class="newprojects"> Save </button>
         </form>
       </div>
@@ -171,7 +171,7 @@
               <button type="submit" name="submit" class="btnstyle">View All Projects</button>
           </form>
           <button type="submit" class="update-project"> Update </button>
-          <div id="showallprojects"></div>
+          <div id="index"></div>
           <!-- ADD A CLASS ID TO CONNECT JS -->
       </div>
     </div>
@@ -188,7 +188,7 @@
 
 
   <!-- INDEX ALL HISTORY -->
-  <div id="index"></div>
+  <!-- <div id="index"></div> -->
 
   <!-- </br>
   <div class = "actionbtnsprojects">
