@@ -3,7 +3,7 @@
 
 //declare variable app with key api that has a value of our server location
 const app = {
-  host: 'http://localhost:3000/',
+  host: 'http://localhost:3000',
   // user: {
     //id: ?
     //email: ?
