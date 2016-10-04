@@ -19,8 +19,6 @@ const onGetProjects = function (data) {
   api.getProjects(data)
     .done(ui.getProjectsSuccess)
     .fail(ui.failure);
-  // onShowProjects();
-  // onNewProject();
 };
 
 const onShowProject = function (event) {
@@ -74,6 +72,7 @@ const addHandlers = () => {
   $('#updateProjectModal').on('submit', onUpdateProject);
   $('.title-display').on('click','.delete-project',deleteId);
   $('#delete-project-button').on('click', onDeleteProject);
+
 
 };
 

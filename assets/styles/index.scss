@@ -21,13 +21,28 @@ h1 {
 }
 
 body {
-  background-color: #f1f1f2;
-  color: #bcbabe;
+  background-color: #e6df44;
+  color: #011a27;
   font-family: $fontstyle
+}
+
+#message,
+.workingcontent {
+  width: 70%;
+  margin: 2% auto;
+  text-align: justify;
 }
 
 #index {
   text-align: center;
+}
+
+.notebook {
+  font-size: 18px;
+}
+
+.project {
+  font-size: 18px;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -43,34 +58,55 @@ body {
   color: p#ba5a69ink;
 }
 
+.warning {
+  color: red;
+}
+
 .newbtnstyle {
-  //  border-top: 1px solid #1994ad;
-   background: #1994ad;
-   background: -webkit-gradient(linear, left top, left bottom, from(#1994ad), to(#1994ad));
-   background: -webkit-linear-gradient(top, #1994ad, #1994ad);
-   background: -moz-linear-gradient(top, #1994ad, #1994ad);
-   background: -ms-linear-gradient(top, #1994ad, #1994ad);
-   background: -o-linear-gradient(top, #1994ad, #1994ad);
-   padding: 5px 10px;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
-   border-radius: 8px;
-  //  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-  //  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-  //  box-shadow: rgba(0,0,0,1) 0 1px 0;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   color: white;
-   font-size: 14px;
-  //  font-family: Helvetica, Arial, Sans-Serif;
-   text-decoration: none;
-   vertical-align: middle;
-   }
+  background-color: #063852;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #063852;
+  display: inline-block;
+  cursor: pointer;
+  color: #f1f1f2;
+  // font-family: Arial;
+  font-size: 14px;
+  padding: 2px 8px;
+  text-decoration: none;
+  }
+
 .newbtnstyle:hover {
   //  border-top-color: #f1f1f2;
    background: #f1f1f2;
-   color: #a1d6e2;
+   color: #f0810f;
    }
 .newbtnstyle:active {
   //  border-top-color: #1994ad;
-   background: #1994ad;
+   background: #f0810f;
    }
+
+.editdeletebtns {
+  background-color: #063852;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #063852;
+  display: inline-block;
+  cursor: pointer;
+  color: #f1f1f2;
+  // font-family: Arial;
+  font-size: 14px;
+  padding: 2px 8px;
+  text-decoration: none;
+}
+
+.editdeletebtns:hover {
+  background-color: #f0810f;
+}
+
+.editdeletebtns:active {
+  position: relative;
+  top: 1px;
+}

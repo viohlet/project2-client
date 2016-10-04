@@ -23,7 +23,7 @@
 <!-- Change Password Modal -->
     <div class = "byescreen">
       <div class= "cambiopass">
-      <button type="button" class="newbtnstyle" style="float:left" data-toggle="modal"
+      <button type="button" class="newbtnstyle" style="float:right" data-toggle="modal"
       data-target="#cambiopass">Change Password</button>
         <!-- Modal -->
         <div id="cambiopass" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -136,13 +136,10 @@
     </div>
     <!-- End of hiscreen -->
 
-
     <div id="message"></div>
 
-
-    <h3>
-      My Projects
-    </h3>
+    <div class = "workingcontent">
+      <h3>My Projects</h3>
 
 
 <!-- Projects Dropdown -->
@@ -158,19 +155,19 @@
     <div class="collapse" id="collapseadd">
       <div class="well">
         <form id="addnewtitle">
-          Title <input type="text" name="project[title]" placeholder="New title">
-          <button type="submit" name="submit"> Save </button>
+          <p>Visit Settings to edit or delete this project.</p> </br>
+          Title of your new project<input type="text" name="project[title]" placeholder="New title">
+          <button type="submit" name="submit" class="editdeletebtns"> Save </button>
         </form>
       </div>
     </div>
     <div class="collapse" id="collapseupdate">
       <div class="well">
-          You may edit a project title or delete an entire project.
-          Warning! Deleting one project removes all the user stories it contains.
+          You may edit a project title or delete an entire project.<br/>
+          <div class="warning">Warning! Deleting one project removes all the user stories it contains.</div></br>
           <!-- <button type="submit" class="update-project"> Edit </button> -->
-          <!-- Index Projects -->
           <form id="get-projects">
-             <button type="submit" name="submit" class="btn btn-primary">All Projects</button>
+             <button type="submit" name="submit" class="editdeletebtns">All Projects</button>
           </form>
       </div>
     </div>
@@ -181,27 +178,10 @@
       </div>
     </div> -->
 
-    <!-- Edit Thought -->
-    <!-- <form id="edit-thought">
-     <fieldset>
-       <input type="text" name="thought[id]" placeholder="Thought ID" class="form-control input">
-       <div class="form-group">
-         <input type="text" class="form-control input" name="thought[content]" placeholder="Edit your thought!">
-       </div>
-       <button type="submit" class="btn btn-primary pull-right" name="submit">Save Edit</button>
-     </fieldset>
-    </form> -->
 
-     <!-- Delete Thought -->
-    <!-- <form id="delete-thought">
-      <input type="text" class="form-control input" name="thought[id]" placeholder="Thought ID">
-      <button type="submit" name="submit" class="btn btn-primary">Delete</button>
-    </form> -->
-
-
-
-    <!-- Display Content -->
+    <!-- Display the titles -->
     <div class="title-display"></div>
+    <!-- <button id="hideprojects" type="submit" name="submit" class="editdeletebtns">Hide Projects</button> -->
 
 
     <!-- Update Thought -->
@@ -247,7 +227,7 @@
 
   </br>
   </br>
-  </br>
+  <h3>My User Stories</h3>
   <div class = "notebook">
     As a <input type="text" placeholder="role">, I want to <input type="text" placeholder="action">,
     so that/because <input type="text" placeholder="goal">.
@@ -272,5 +252,7 @@
       <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Save
     </button>
   </div>
+</div>
+
 </body>
 </html>
