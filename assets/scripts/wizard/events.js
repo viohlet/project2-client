@@ -14,19 +14,32 @@ const onNewProject = function (event) {
 	  .fail(ui.failure);
 };
 
-// const onIndexProjects = function (event) {
+// const onShowProjects = function () {
+//   $('#index').css('display');
+// };
+
+const onGetProjects = function (data) {
+  event.preventDefault();
+  api.getProjects(data)
+    .done(ui.getProjectsSuccess)
+    .fail(ui.failure);
+  // onShowProjects();
+  // onNewProject();
+};
+
+// const onShowProject = function (event) {
 //   event.preventDefault();
-//   api.indexProjects()
-//     .done(ui.onIndexProjectsSuccess)
+//   let data = getFormFields(event.target);
+//   api.showThought(data)
+//     .done(ui.success)
 //     .fail(ui.failure);
 // };
 
 const addHandlers = () => {
-  // $('.tile').on('click', onClickTile);
 	$('#addnewtitle').on('submit', onNewProject);
-	// $('#getGameById').on('submit', onGetGameById);
-  // $('#index-projects').on('submit', onIndexProjects);
-	// $('.new-project').on('click', onNewProject);
+  $('#get-projects').on('submit', onGetProjects);
+  // $('#show-project').on('submit', onShowProject);
+
 
 };
 

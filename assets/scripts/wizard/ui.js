@@ -15,14 +15,16 @@ const newProjectSuccess = (data) => {
   console.log(data);
 };
 
-// const onIndexProjectsSuccess = (data) => {
-//   document.getElementById("index").innerHTML = 'All projects: '+ data.projects.length;
-//   $('#index').fadeIn('fast').delay(4000).fadeOut('fast');
-// };
+const showProjectsTemplate = require('../templates/project-listing.handlebars');
+
+const getProjectsSuccess = (projects) => {
+  $('.content-display').html(showProjectsTemplate(projects));
+  console.log(projects);
+};
 
 module.exports = {
   success,
   failure,
   newProjectSuccess,
-  // onIndexProjectsSuccess,
+  getProjectsSuccess,
 };

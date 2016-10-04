@@ -14,9 +14,20 @@ const newProject = (data) => {
   });
 };
 
-// const indexProjects = () => {
+const getProjects = () => {
+  return $.ajax({
+    url: app.host + '/projects',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    }
+  });
+};
+
+// const showProject = (data) => {
+//   let project_id = data.project.id;
 //   return $.ajax({
-//     url: app.host + '/projects',
+//     url: app.host + '/projects/' + project_id,
 //     method: 'GET',
 //     headers: {
 //       Authorization: 'Token token=' + app.user.token,
@@ -26,9 +37,7 @@ const newProject = (data) => {
 
 module.exports = {
   newProject,
-  // updateGame,
-  // indexProjects,
-  // getGameById,
-  // historyGames,
-  // joinGame,
+  getProjects,
+  // showProject
+
 };
