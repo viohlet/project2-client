@@ -147,14 +147,14 @@
 
 <!-- Projects Dropdown -->
     <button type="button" class="btn btn-warning" aria-label="Left Align" data-toggle="collapse" data-target="#collapseadd" aria-expanded="false" aria-controls="collapseExamples">
-      <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add
+      <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add a New Project
     </button>
     <button type="button" class="btn btn-warning" aria-label="Left Align" data-toggle="collapse" data-target="#collapseupdate" aria-expanded="false" aria-controls="collapseExample">
-      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Update
+      <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings
     </button>
-    <button type="button" class="btn btn-warning" aria-label="Left Align" data-toggle="collapse" data-target="#collapsedelete" aria-expanded="false" aria-controls="collapseExample">
+    <!-- <button type="button" class="btn btn-warning" aria-label="Left Align" data-toggle="collapse" data-target="#collapsedelete" aria-expanded="false" aria-controls="collapseExample">
       <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete
-    </button>
+    </button> -->
     <div class="collapse" id="collapseadd">
       <div class="well">
         <form id="addnewtitle">
@@ -165,50 +165,84 @@
     </div>
     <div class="collapse" id="collapseupdate">
       <div class="well">
-          Update - show index
-          <button type="submit" class="update-project"> Update </button>
+          You may edit a project title or delete an entire project.
+          Warning! Deleting one project removes all the user stories it contains.
+          <!-- <button type="submit" class="update-project"> Edit </button> -->
+          <!-- Index Projects -->
+          <form id="get-projects">
+             <button type="submit" name="submit" class="btn btn-primary">All Projects</button>
+          </form>
       </div>
     </div>
-    <div class="collapse" id="collapsedelete">
+    <!-- <div class="collapse" id="collapsedelete">
       <div class="well">
           Warning: Deleting one project will delete all of the user stories contained.
-          Delete - show index
           <input class="btn btn-default" type="submit" value="Delete">
-          <!-- ADD A CLASS ID TO CONNECT JS -->
       </div>
-    </div>
+    </div> -->
 
-
-    <!-- Index Projects -->
-    <form id="get-projects">
-       <button type="submit" name="submit" class="btn btn-primary">All Projects</button>
-    </form>
-
-
-    <!-- Show Project -->
-    <!-- <form id="show-thought">
-      <input type="text" class="form-control input" name="project[id]" placeholder="Project ID">
-      <button type="submit" name="submit" class="btn btn-primary">Show Project</button>
+    <!-- Edit Thought -->
+    <!-- <form id="edit-thought">
+     <fieldset>
+       <input type="text" name="thought[id]" placeholder="Thought ID" class="form-control input">
+       <div class="form-group">
+         <input type="text" class="form-control input" name="thought[content]" placeholder="Edit your thought!">
+       </div>
+       <button type="submit" class="btn btn-primary pull-right" name="submit">Save Edit</button>
+     </fieldset>
     </form> -->
 
+     <!-- Delete Thought -->
+    <!-- <form id="delete-thought">
+      <input type="text" class="form-control input" name="thought[id]" placeholder="Thought ID">
+      <button type="submit" name="submit" class="btn btn-primary">Delete</button>
+    </form> -->
+
+
+
     <!-- Display Content -->
-    <div class="content-display"></div>
+    <div class="title-display"></div>
 
-  <!-- </br>
-  <div class = "actionbtnsprojects">
-    <button type="button" class="btn btn-default" aria-label="Left Align">
-      <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add
-    </button>
 
-    <button type="button" class="btn btn-default" aria-label="Left Align">
-      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Update
-    </button>
+    <!-- Update Thought -->
+    <div class="modal fade" id="updateProjectModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Edit Project</h4>
+        </div>
+        <div class="modal-body">
+          <form id="edit-project">
+            <fieldset>
+              <div class="form-group">
+                <input type="text" class="form-control input" name="project[title]" placeholder="Edit the title of your project">
+              </div>
+                <button type="submit" class="btn btn-primary pull-right update-project-button" name="submit">Save</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
 
-    <button type="button" class="btn btn-default" aria-label="Left Align">
-      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remove
-    </button>
-  </div> -->
-
+    <!-- Delete Thought -->
+    <div class="modal fade" id="deleteProjectModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Are you sure? Deleting this Project will delete all its user stories.</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-danger delete-project-button" id="delete-project-button" data-dismiss="modal">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
 
 
   </br>

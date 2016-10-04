@@ -1,7 +1,8 @@
 
 <p class="project">
-  Project{{project.id}}: "{{title}}"
+  Project #{{id}}:  {{title}}
 
-  
+  <button class="btn btn-primary btn-xs update-project" data-toggle="modal" data-target="#updateProjectModal" data-project-id= {{id}}>Edit</button>
+  <button class="btn btn-primary btn-xs delete-project" data-toggle="modal" data-target="#deleteProjectModal" data-project-id= {{id}}>Delete</button>
 
 </p>

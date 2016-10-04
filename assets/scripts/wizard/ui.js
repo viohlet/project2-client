@@ -2,6 +2,10 @@
 
 // const app = require('../app');
 
+const clearInputField = () => {
+  $('.input').val('');
+};
+
 const success = (data) => {
   console.log(data);
 };
@@ -18,8 +22,13 @@ const newProjectSuccess = (data) => {
 const showProjectsTemplate = require('../templates/project-listing.handlebars');
 
 const getProjectsSuccess = (projects) => {
-  $('.content-display').html(showProjectsTemplate(projects));
+  $('.title-display').html(showProjectsTemplate(projects));
   console.log(projects);
+};
+
+const updateProjectSuccess = () => {
+  clearInputField();
+  $('#updateProjectModal').modal('hide');
 };
 
 module.exports = {
@@ -27,4 +36,5 @@ module.exports = {
   failure,
   newProjectSuccess,
   getProjectsSuccess,
+  updateProjectSuccess,
 };

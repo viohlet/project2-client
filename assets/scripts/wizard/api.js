@@ -24,20 +24,42 @@ const getProjects = () => {
   });
 };
 
-// const showProject = (data) => {
-//   let project_id = data.project.id;
-//   return $.ajax({
-//     url: app.host + '/projects/' + project_id,
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + app.user.token,
-//     }
-//   });
-// };
+const showProject = (data) => {
+  let project_id = data.project.id;
+  return $.ajax({
+    url: app.host + '/projects/' + project_id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    }
+  });
+};
+
+const updateProject = (data, id) => {
+  return $.ajax({
+    url: app.host + '/projects/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    data: data,
+  });
+};
+
+const deleteProject = (id) => {
+  return $.ajax({
+    url: app.host + '/projects/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    }
+  });
+};
 
 module.exports = {
   newProject,
   getProjects,
-  // showProject
-
+  showProject,
+  updateProject,
+  deleteProject,
 };
