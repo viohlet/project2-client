@@ -11,8 +11,6 @@ const showOtherButtons = function (){
 const hideLogInsButton = function () {
   $('#loginbutton').css('display', 'none');
   $('#signupbutton').css('display', 'none');
-  // $('.ingresa').css('display', 'none');
-	// $('.register').css('display', 'none');
 };
 
 
@@ -31,10 +29,22 @@ const signInSuccess = (data) => {
   hideLogInsButton();
 };
 
+const showLogInButtons = function (){
+  $('#loginbutton').css('display', 'block');
+  $('#signupbutton').css('display', 'block');
+};
+
+const hideOtherButtons = function (){
+  $('.byescreen').css('display', 'none');
+};
+
+
 const signOutSuccess = () =>{
   delete app.user;
   // console.log(app);
   $('.app').css("display", "none");
+  showLogInButtons();
+  hideOtherButtons();
 };
 
 const changePasswordSuccess = () => {
