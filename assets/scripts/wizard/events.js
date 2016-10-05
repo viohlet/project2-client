@@ -64,6 +64,11 @@ const onDeleteProject = function (event) {
     .fail(ui.failure);
 };
 
+
+$("#actionbtnsuserstories").click(function () {
+  $("#addednewuserstory").append('<div class = "notebook"> As a <input type="text" placeholder="role">, I want to <input type="text" placeholder="action">,so that/because <input type="text" placeholder="goal">.</div>');
+});
+
 const addHandlers = () => {
 	$('#addnewtitle').on('submit', onNewProject);
   $('#get-projects').on('submit', onGetProjects);
