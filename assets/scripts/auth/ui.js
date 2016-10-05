@@ -15,8 +15,11 @@ const hideLogInsButton = function () {
 };
 
 const showWorkingArea = function () {
-  // $('.cambiopass').css('display', 'block');
   $('.workingcontent').css('display', 'block');
+};
+
+const hideWorkingArea = function () {
+  $('.workingcontent').css('display', 'none');
 };
 
 const signUpSuccess = (data) => {
@@ -52,6 +55,7 @@ const signOutSuccess = () =>{
   $('.app').css("display", "none");
   showLogInButtons();
   hideOtherButtons();
+  hideWorkingArea();
 };
 
 const changePasswordSuccess = () => {

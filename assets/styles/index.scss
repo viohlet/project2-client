@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 45px;
   text-align: center;
 }
 
@@ -25,7 +25,7 @@ h1 {
   height: 240px;
   top: 50%;
   left: 50%;
-  margin-top: -140px;
+  margin-top: -160px;
   margin-left: -170px;
   // margin-left: auto;
   // margin-right: auto;
@@ -76,6 +76,10 @@ body {
   text-align: justify;
   display: none;
 }
+
+// .hidden {
+//   display: none;
+// }
 
 #index {
   text-align: center;
@@ -132,11 +136,35 @@ body {
    }
 
 .editdeletebtns {
-  background-color: #063852;
+  background-color: #d1b280;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #063852;
+  border: 1px solid #d1b280;
+  display: inline-block;
+  cursor: pointer;
+  color: #f1f1f2;
+  // font-family: Arial;
+  font-size: 16px;
+  padding: 4px 10px;
+  text-decoration: none;
+}
+
+.editdeletebtns:hover {
+  background-color: #594d46;
+}
+
+.editdeletebtns:active {
+  position: relative;
+  top: 1px;
+}
+
+.deletebtn {
+  background-color: #594d46;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #594d46;
   display: inline-block;
   cursor: pointer;
   color: #f1f1f2;
@@ -146,11 +174,35 @@ body {
   text-decoration: none;
 }
 
-.editdeletebtns:hover {
-  background-color: #f0810f;
+.deletebtn:hover {
+  background-color: #063852;
 }
 
-.editdeletebtns:active {
+.deletebtn:active {
+  position: relative;
+  top: 1px;
+}
+
+.optionsbtn {
+  background-color: #594d46;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #594d46;
+  display: inline-block;
+  cursor: pointer;
+  color: #f1f1f2;
+  // font-family: Arial;
+  font-size: 14px;
+  padding: 2px 8px;
+  text-decoration: none;
+}
+
+.optionsbtn:hover {
+  background-color: #d1b280;
+}
+
+.optionsbtn:active {
   position: relative;
   top: 1px;
 }

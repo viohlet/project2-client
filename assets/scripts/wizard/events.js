@@ -24,10 +24,14 @@ const onGetProjects = function (data) {
 const onShowProject = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
-  api.showThought(data)
+  api.showProject(data)
     .done(ui.success)
     .fail(ui.failure);
 };
+
+$('#hide-projects').click(function(){
+   $('.title-display').toggleClass('hidden');
+});
 
 const updateId =  function (event){
   event.preventDefault();
@@ -66,8 +70,30 @@ const onDeleteProject = function (event) {
 
 
 $("#actionbtnsuserstories").click(function () {
-  $("#addednewuserstory").append('<div class = "notebook"> As a <input type="text" placeholder="role">, I want to <input type="text" placeholder="action">,so that/because <input type="text" placeholder="goal">.</div>');
+  $("#addustemplate").append('<div class = "notebook"> As a <input type="text" placeholder="role">, I want to <input type="text" placeholder="action">,so that/because <input type="text" placeholder="goal">.</div>');
 });
+
+// const onShowUserStories = function (event) {
+//   event.preventDefault();
+//   let data = getFormFields(event.target);
+//   api.showUserStories(data)
+//     .done(ui.success)
+//     .fail(ui.failure);
+// };
+
+const onShowUserStories = function(){
+  api.showUserStories()
+    .done(ui.showUserStoriesSuccess)
+    .fail(ui.failure);
+};
+
+const onCreateUserStory = function (event) {
+  event.preventDefault();
+	let data = getFormFields(event.target);
+  api.newProject(data)
+	  .done(ui.createUserStorySuccess)
+	  .fail(ui.failure);
+};
 
 const addHandlers = () => {
 	$('#addnewtitle').on('submit', onNewProject);
@@ -77,7 +103,8 @@ const addHandlers = () => {
   $('#updateProjectModal').on('submit', onUpdateProject);
   $('.title-display').on('click','.delete-project',deleteId);
   $('#delete-project-button').on('click', onDeleteProject);
-
+  $('#showusbtn').on('submit', onShowUserStories);
+  $('#createnewstory').on('submit', onCreateUserStory);
 
 };
 

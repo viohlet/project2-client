@@ -56,10 +56,41 @@ const deleteProject = (id) => {
   });
 };
 
+
+
+const showUserStories = (data) => {
+  let user_story_id = data.user_story.id;
+  return $.ajax({
+    url: app.host + '/user_stories/' + user_story_id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    }
+  });
+};
+
+const createUserStory = (data) => {
+  console.log(data);
+  return $.ajax({
+    url: app.host+ '/user_stories',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    data: {
+      user_story: {
+        project_id: data,
+      }
+  }});
+};
+
+
 module.exports = {
   newProject,
   getProjects,
   showProject,
   updateProject,
   deleteProject,
+  showUserStories,
+  createUserStory,
 };
