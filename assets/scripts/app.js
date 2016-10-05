@@ -3,7 +3,8 @@
 
 //declare variable app with key api that has a value of our server location
 const app = {
-  host: 'https://fathomless-ridge-48028.herokuapp.com',
+  // host: 'https://fathomless-ridge-48028.herokuapp.com',
+  host: 'http://localhost:3000',
   // user: {
     //id: ?
     //email: ?

@@ -9,8 +9,9 @@ const showOtherButtons = function (){
 };
 
 const hideLogInsButton = function () {
-  $('#loginbutton').css('display', 'none');
-  $('#signupbutton').css('display', 'none');
+  $('.hiscreen').css('display', 'none');
+  // $('#loginbutton').css('display', 'none');
+  // $('#signupbutton').css('display', 'none');
 };
 
 
@@ -30,8 +31,9 @@ const signInSuccess = (data) => {
 };
 
 const showLogInButtons = function (){
-  $('#loginbutton').css('display', 'block');
-  $('#signupbutton').css('display', 'block');
+  $('.hiscreen').css('display', 'block');
+  // $('#loginbutton').css('display', 'block');
+  // $('#signupbutton').css('display', 'block');
 };
 
 const hideOtherButtons = function (){
