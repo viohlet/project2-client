@@ -4,7 +4,11 @@ User Stories Wizard
 
 - Access my app https://viohlet.github.io/project2-client/
 
-- Original wireframe
+- Original wireframe: http://imgur.com/a/lmmNh
+
+- New wireframe suggested by Jeff: http://imgur.com/a/nmENS
+
+- Original ERD: http://imgur.com/a/NwZRW
 
 - Technologies used:
 
