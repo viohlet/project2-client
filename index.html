@@ -53,9 +53,9 @@
       <!-- </div> -->
 
       <form id="sign-out">
-      <fieldset>
-      <button type="submit" name="submit" class="newbtnstyle" style="float:right">Log out</button>
-      </fieldset>
+        <fieldset>
+          <button type="submit" name="submit" class="newbtnstyle" style="float:right">Log out</button>
+        </fieldset>
       </form>
     </div>
     <!-- <p style="clear:floats"></p> -->
@@ -64,7 +64,7 @@
     <h1>User Stories Wizard</h1>
 
 
-  <!-- hiscreen DIV -->
+<!-- hiscreen DIV -->
   <!-- Log-in Modal -->
       <br/>
       <div class = "hiscreen">
@@ -116,61 +116,28 @@
     <div id="message"></div>
 
 
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
     <div class = "workingcontent">
-      <h3>My Projects</h3>
-
 
 <!-- Projects Dropdown -->
-    <button type="button" class="btn btn-warning" aria-label="Left Align" data-toggle="collapse" data-target="#collapseadd" aria-expanded="false" aria-controls="collapseExamples">
+    <button type="button" class="editdeletebtns" aria-label="Left Align" data-toggle="collapse" data-target="#collapseadd" aria-expanded="false" aria-controls="collapseExamples">
       <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add a New Project
     </button>
-    <button type="button" class="btn btn-warning" aria-label="Left Align" data-toggle="collapse" data-target="#collapseupdate" aria-expanded="false" aria-controls="collapseExample">
-      <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings
-    </button>
-    <!-- <button type="button" class="btn btn-warning" aria-label="Left Align" data-toggle="collapse" data-target="#collapsedelete" aria-expanded="false" aria-controls="collapseExample">
-      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete
-    </button> -->
+
     <div class="collapse" id="collapseadd">
       <div class="well">
         <form id="addnewtitle">
-          <p>Visit Settings to edit or delete this project.</p> </br>
           Title of your new project<input type="text" name="project[title]" placeholder="New title">
           <button type="submit" name="submit" class="editdeletebtns"> Save </button>
         </form>
       </div>
     </div>
-    <div class="collapse" id="collapseupdate">
-      <div class="well">
-          You may edit a project title or delete an entire project.<br/>
-          <div class="warning">Warning! Deleting one project removes all the user stories it contains.</div></br>
-          <!-- <button type="submit" class="update-project"> Edit </button> -->
-          <form id="get-projects">
-             <button type="submit" name="submit" class="editdeletebtns">All Projects</button>
-          </form>
-      </div>
-    </div>
-    <!-- <div class="collapse" id="collapsedelete">
-      <div class="well">
-          Warning: Deleting one project will delete all of the user stories contained.
-          <input class="btn btn-default" type="submit" value="Delete">
-      </div>
-    </div> -->
+    </br>
+    </br>
+    <form id="get-projects">
+       <button type="submit" name="submit" class="editdeletebtns">
+         <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Show All Projects
+       </button>
+    </form>
 
 
     <!-- Display the titles -->
@@ -219,12 +186,25 @@
     </div>
 
 
+    <!-- <form id="showstoriesfordisproject">
+      <fieldset>
+        <button type="submit" name="submit" class="newbtnstyle" style="float:right">User stories</button>
+      </fieldset>
+    </form> -->
+
+
+
+
   </br>
   </br>
   <h3>My User Stories</h3>
+
+
+
+
+
   </br>
   <div class = "notebook">
-    <input type="radio" class="usradio" name="rate">
     As a <input type="text" placeholder="role">, I want to <input type="text" placeholder="action">,
     so that/because <input type="text" placeholder="goal">.
   </div>
@@ -235,19 +215,21 @@
     <button type="button" class="btn btn-default" aria-label="Left Align">
       <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add
     </button>
-
     <!-- <button type="button" class="btn btn-default" aria-label="Left Align">
       <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Update
     </button> -->
-
-    <button type="button" class="btn btn-default" aria-label="Left Align">
+    <!-- <button type="button" class="btn btn-default" aria-label="Left Align">
       <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remove
     </button>
-
     <button type="button" class="btn btn-default" aria-label="Left Align">
       <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Save
-    </button>
+    </button> -->
   </div>
+
+
+  <div class="show-specific-userstory"></div>
+
+
 </div>
 
 </body>

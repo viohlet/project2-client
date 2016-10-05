@@ -14,6 +14,10 @@ const hideLogInsButton = function () {
   // $('#signupbutton').css('display', 'none');
 };
 
+const showWorkingArea = function () {
+  // $('.cambiopass').css('display', 'block');
+  $('.workingcontent').css('display', 'block');
+};
 
 const signUpSuccess = (data) => {
   app.user = data.user;
@@ -28,6 +32,7 @@ const signInSuccess = (data) => {
   $('#message').fadeIn('fast').delay(3000).fadeOut('fast');
   showOtherButtons();
   hideLogInsButton();
+  showWorkingArea();
 };
 
 const showLogInButtons = function (){

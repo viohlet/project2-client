@@ -1,8 +1,12 @@
 
 <p class="project">
-  Project #{{id}}:  {{title}}
+  <!-- Project #{{id}}:  {{title}} -->
 
-  <button class="editdeletebtns btn-xs update-project" data-toggle="modal" data-target="#updateProjectModal" data-project-id= {{id}}>Edit</button>
+  {{title}}
+
+  <button class="editdeletebtns btn-xs update-project" data-toggle="modal" data-target="#updateProjectModal" data-project-id= {{id}}>Edit Title</button>
   <button class="editdeletebtns btn-xs delete-project" data-toggle="modal" data-target="#deleteProjectModal" data-project-id= {{id}}>Delete</button>
+  <!-- <button class="editdeletebtns btn-xs show-userstories" data-target="#showeachsetofuserstories" data-user_story-id= {{id}}>Delete</button> -->
+  <button class="editdeletebtns btn-xs show-userstories" type="submit" name="submit" > Show User Stories </button>
 
 </p>
