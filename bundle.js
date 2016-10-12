@@ -225,7 +225,8 @@ webpackJsonp([0],[
 	//declare variable app with key api that has a value of our server location
 
 	var app = {
-	  host: 'https://fathomless-ridge-48028.herokuapp.com'
+	  // host: 'https://fathomless-ridge-48028.herokuapp.com',
+	  host: 'http://localhost:3000'
 	};
 
 	//exports the variable containing the server location to be used in other files.
@@ -362,8 +363,13 @@ webpackJsonp([0],[
 	  event.preventDefault();
 	  var id = $(".update-project-button").attr("data-project-id");
 	  var data = getFormFields(event.target);
-	  api.updateProject(data, id).done(ui.updateProjectSuccess).fail(ui.failure);
-	  api.getProjects().done(ui.getProjectsSuccess).fail(ui.failure);
+	  api.updateProject(data, id).done(function () {
+	    ui.updateProjectSuccess();
+	    onGetProjects(event);
+	  }).fail(ui.failure);
+	  // api.getProjects()
+	  //   .done(ui.getProjectsSuccess)
+	  //   .fail(ui.failure);
 	};
 
 	var deleteId = function deleteId(event) {
@@ -382,6 +388,9 @@ webpackJsonp([0],[
 	$("#actionbtnsuserstories").click(function () {
 	  $("#addustemplate").append('<div class = "notebook"> As a <input type="text" placeholder="role">, I want to <input type="text" placeholder="action">,so that/because <input type="text" placeholder="goal">.</div>');
 	});
+
+	// conditional ^
+
 
 	// const onShowUserStories = function (event) {
 	//   event.preventDefault();
