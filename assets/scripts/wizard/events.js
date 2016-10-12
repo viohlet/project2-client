@@ -44,11 +44,14 @@ const onUpdateProject = function (event) {
   let id = $(".update-project-button").attr("data-project-id");
   let data = getFormFields(event.target);
   api.updateProject(data, id)
-    .done(ui.updateProjectSuccess)
+    .done( function(){
+      ui.updateProjectSuccess();
+      onGetProjects(event);
+    })
     .fail(ui.failure);
-  api.getProjects()
-    .done(ui.getProjectsSuccess)
-    .fail(ui.failure);
+  // api.getProjects()
+  //   .done(ui.getProjectsSuccess)
+  //   .fail(ui.failure);
 };
 
 const deleteId =  function (event){
@@ -72,6 +75,9 @@ const onDeleteProject = function (event) {
 $("#actionbtnsuserstories").click(function () {
   $("#addustemplate").append('<div class = "notebook"> As a <input type="text" placeholder="role">, I want to <input type="text" placeholder="action">,so that/because <input type="text" placeholder="goal">.</div>');
 });
+
+// conditional ^
+
 
 // const onShowUserStories = function (event) {
 //   event.preventDefault();
