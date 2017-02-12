@@ -5,6 +5,21 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
 
+// const showWelcomeMessage = function () {
+//   $('.welcome-message').css('display', 'block');
+// };
+//
+// const onHomeButton = () => {
+//   $('.home-button').html(showWelcomeMessage());
+//   console.log();
+//   // showWelcomeMessage();
+//
+// };
+
+const onHomeButton = function () {
+  document.getElementById("welcome-message").style.display="block";
+  // document.getElementById(welcome-message).style.visibility = '';
+};
 
 const onNewProject = function (event) {
   event.preventDefault();
@@ -111,6 +126,7 @@ const addHandlers = () => {
   $('#delete-project-button').on('click', onDeleteProject);
   $('#showusbtn').on('submit', onShowUserStories);
   $('#createnewstory').on('submit', onCreateUserStory);
+  $('.homebutton').on('click', onHomeButton);
 
 };
 

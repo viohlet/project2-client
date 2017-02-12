@@ -3,38 +3,69 @@
 <html>
 
   <head>
-
     <title> User Stories Wizard </title>
-    <link href="https://fonts.googleapis.com/css?family=Lancelot" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
 
     <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-
   </head>
 
 
   <body>
 
-    <!-- <header id="spo-navbar" class="navbar navbar-default navbar-fixed-top navbar-semi-transparent navbar-highlight-aquamarine" role="banner">
-      Title
-    </header> -->
+    <nav class="navbar navbar-inverse bg-inverse">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar">''</span>
+          <span class="icon-bar">''</span>
+          <span class="icon-bar">''</span>
+        </button>
+      <nav class="navbar-brand mb-0">USW</nav>
+      </div>
 
-<!-- byescreen DIV -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+              <!-- <a class='required-auth' href='#' >Home</a> -->
+              <!-- <div class='homebutton'>
+                <button type="button" value ='button1' onclick='onHomeButton("welcome-message")' class="btn btn-link"> Home </button>
+              </div> -->
+                <a class='homebutton' href='#' onclick='onHomeButton("welcome-message")'> Home </a>
+              <!-- <input type='button' value ='button1' onclick='onHomeButton("welcome-message")'> -->
+          </li>
+          <li>
+              <a class='required-auth' href='#' data-toggle="modal" data-target='#log-in'>Sign in</a>
+          </li>
+          <li>
+              <a class='required-auth' href='#' data-toggle="modal" data-target='#register'>Sign up</a>
+          </li>
+          <li>
+              <a href='#' class='other-auth-settings' data-toggle="modal" data-target='#cambiopass'>Change password</a>
+          </li>
+          <li>
+              <a href='#' class='other-auth-settings' id='sign-out'>Sign out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
 <!-- Change Password Modal -->
+
     <div class = "byescreen">
-      <div class= "cambiopass">
-      <button type="button" class="newbtnstyle" style="float:right" data-toggle="modal"
-      data-target="#cambiopass">Change Password</button>
-        <!-- Modal -->
-        <div id="cambiopass" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-           <div class="modal-content">
-            <!-- Modal content-->
-              <div class="cambiopass-header">
-                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-                  <h4 class="cambiopass-title">Change your password</h4>
+
+      <!-- <div class= "cambiopass"> -->
+        <div class="modal fade" id="cambiopass" tabindex="-1" role="dialog" aria-labelledby="sign-in" aria-hidden="true">
+          <div class="modal-dialog"  role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="changepassword-title">Please update your password</h4>
               </div>
-              <div class="cambiopass-body">
+              <div class="changepassword-body">
+                <!-- <button type="button" class="newbtnstyle" style="float:right" data-toggle="modal"
+                data-target="#cambiopass">Change Password</button> -->
                 <form id="change-password">
                     <!-- <legend>Changeyour Password</legend> -->
                     <!-- <input type="email" name="credentials[email]" placeholder="Your email"> -->
@@ -44,79 +75,94 @@
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <div class="modal-footer"></div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- </div> -->
 
+      </div>
+
+    <div>
       <form id="sign-out">
         <fieldset>
           <button type="submit" name="submit" class="newbtnstyle" style="float:right">Log out</button>
         </fieldset>
       </form>
     </div>
-    <!-- <p style="clear:floats"></p> -->
 
-
-    <h1>User Stories Wizard</h1>
-
+    <div class = "title">
+      <h1>User Stories Wizard</h1>
+    </div>
 
 <!-- hiscreen DIV -->
   <!-- Log-in Modal -->
-      <br/>
       <div class = "hiscreen">
-        <div id="container"> <h2>Sign-in</h2>
-          <form id="sign-in" action="process.php" method="POST">
-            <input class="signinplaceholder" type="email" name="credentials[email]" placeholder="Your email">
-            </br>
-            <input class="signinplaceholder" type="password" name="credentials[password]" placeholder="Password">
-            </br>
-            <input class="optionsbtn" type="submit" name="submit" value="Next">
-          </form>
-        </div>
-      </br>
-      <!-- Sign-up Modal -->
-      <div class= register>
-      <button type="button" id="signupbutton" class="newbtnstyle" data-toggle="modal"
-      data-target="#register">Join!</button>
-        <!-- Modal -->
-        <div id="register" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-           <div class="modal-content">
-            <!-- Modal content-->
-              <div class="register-header">
-                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-                  <h4 class="register-title">Welcome!</h4>
+
+        <div class="modal fade" id="log-in" tabindex="-1" role="dialog" aria-labelledby="sign-in" aria-hidden="true">
+          <div class="modal-dialog"  role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="signin-title">Please Sign-In</h4>
               </div>
-              <div class="register-body">
-                <form id="sign-up" action="process.php" method="POST">
-                  <!-- <fieldset> -->
-                    <!-- <legend>Register</legend> -->
-                    <input type="email" name="credentials[email]" placeholder="Your email">
-                    <input type="password" name="credentials[password]" placeholder="Password">
-                    <input type="password" name="credential[password_confirmation]" placeholder="Confirm your password">
-                    <input type="submit" name="submit" value="Next">
-                  <!-- </fieldset> -->
+              <div class="signin-body">
+                <form id="sign-in" action="process.php" method="POST">
+                  <input class="signinplaceholder" type="email" name="credentials[email]" placeholder="Email Address">
+                  <input class="signinplaceholder" type="password" name="credentials[password]" placeholder="Password">
+                  <input class="optionsbtn" type="submit" name="submit" value="Next">
                 </form>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
+              <div class="modal-footer"></div>
             </div>
           </div>
         </div>
+
       </div>
+
+      <!-- Sign-up Modal -->
+      <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
+        <div class="modal-dialog"  role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="register-title">Welcome!</h4>
+            </div>
+            <div class="register-body">
+              <form id="sign-up" action="process.php" method="POST">
+                  <input type="email" name="credentials[email]" placeholder="Email Address">
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <input type="password" name="credential[password_confirmation]" placeholder="Verify New Password">
+                  <input type="submit" name="submit" value="Next">
+              </form>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
       </div>
+
+
 
     <!-- End of hiscreen -->
 
     <div id="message"></div>
 
+    <div id="welcome-message">
+      </br>
+      Welcome to your User Stories Wizard. This tool is designed
+      </br>
+      to help you with your website development process.
+      </br>
+      </br>
+      Create new projects and each of their user stories.
+      </br>
+      </br>
+      </br>
+      Website still under construction. Please visit soon.
+    </div>
 
     <div class = "workingcontent">
+
 
 <!-- Projects Dropdown -->
     <button type="button" class="editdeletebtns" aria-label="Left Align" data-toggle="collapse" data-target="#collapseadd" aria-expanded="false" aria-controls="collapseExamples">
@@ -205,7 +251,10 @@
 
   </br>
   </br>
-  <h2>My User Stories</h2>
+
+  <div class="myuserstories-subtitle">
+    <h2>My User Stories</h2>
+  </div>
 
   <div id="addustemplate"></div>
 

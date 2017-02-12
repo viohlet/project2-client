@@ -1,7 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-$fontstyle: 'Lancelot', cursive;
+$fontstyle: 'Source Sans Pro', sans-serif;
 
 
 html,
@@ -15,59 +15,82 @@ h1 {
   text-align: center;
 }
 
-.hiscreen {
+.title {
+  color: #E5E0DA;
+  font-family: $fontstyle;
+}
+
+#welcome-message {
+  color: #E5E0DA;
+  font-family: $fontstyle;
+  font-size: 25px;
   text-align: center;
 }
 
-#container {
-  position: fixed;
-  width: 340px;
-  height: 240px;
-  top: 50%;
-  left: 50%;
-  margin-top: -160px;
-  margin-left: -170px;
-  // margin-left: auto;
-  // margin-right: auto;
-  background-color: #d1b280;
-  // text-align: center;
-  // padding: 20px;
-}
+// .hiscreen {
+//   text-align: center;
+// }
 
-#sign-in {
-  margin: 0 auto;
-  margin-top: 20px;
-  font-size: 16px;
-}
+// #container {
+//   position: fixed;
+//   width: 340px;
+//   height: 240px;
+//   top: 50%;
+//   left: 50%;
+//   margin-top: -160px;
+//   margin-left: -170px;
+//   // margin-left: auto;
+//   // margin-right: auto;
+//   background-color: #E5E0DA;
+// }
 
+// #sign-in {
+//   margin: 0 auto;
+//   margin-top: 20px;
+//   font-size: 16px;
+// }
+//
+//
+// .signinplaceholder {
+//   display: inline-block;
+//   margin-left: 18px;
+//   // padding-top: 10px;
+//   font-size: 14px;
+// }
 
-.signinplaceholder {
-  display: inline-block;
-  margin-left: 18px;
-  // padding-top: 10px;
-  font-size: 14px;
-}
+// #loginbutton,
+// #signupbutton {
+//   margin: 0 auto;
+// }
 
-#loginbutton,
-#signupbutton {
-  margin: 0 auto;
-}
-
-.byescreen {
-  display: none;
-  text-align: center;
-}
+// .byescreen {
+//   display: none;
+//   text-align: center;
+// }
 
 body {
-  background-color: #efefef;
-  color: #594d46;
+  background-image:
+  linear-gradient(
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.45)
+  ),
+  url('cleandesk.jpg');
+  background-size: cover;
   font-family: $fontstyle
 }
 
 #message {
-  color: #080706;
+  color: #ffffff;
   text-align: center;
   font-size: 20px;
+}
+
+.title-display {
+  color: #ffffff;
+}
+
+.myuserstories-subtitle {
+  color: #ffffff;
 }
 
 .workingcontent {
