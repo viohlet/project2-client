@@ -5,20 +5,23 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
 
-// const showWelcomeMessage = function () {
-//   $('.welcome-message').css('display', 'block');
-// };
-//
-// const onHomeButton = () => {
-//   $('.home-button').html(showWelcomeMessage());
-//   console.log();
-//   // showWelcomeMessage();
-//
-// };
 
 const onHomeButton = function () {
   document.getElementById("welcome-message").style.display="block";
   // document.getElementById(welcome-message).style.visibility = '';
+};
+
+const onHideHome = function () {
+  document.getElementById("welcome-message").style.display="none";
+};
+
+const onMyProjectsButton = function () {
+  document.getElementById("workingcontent").style.display="block";
+  onHideHome();
+};
+
+const onHideMyProjects = function () {
+  document.getElementById("workingcontent").style.display="none";
 };
 
 const onNewProject = function (event) {
@@ -127,6 +130,9 @@ const addHandlers = () => {
   $('#showusbtn').on('submit', onShowUserStories);
   $('#createnewstory').on('submit', onCreateUserStory);
   $('.homebutton').on('click', onHomeButton);
+  $('.homebutton').on('click', onHideMyProjects);
+  $('.myprojectsbutton').on('click', onHideHome);
+  $('.myprojectsbutton').on('click', onMyProjectsButton);
 
 };
 

@@ -19,11 +19,11 @@ const hideWelcomeMessage = function () {
 };
 
 const showWorkingArea = function () {
-  $('.workingcontent').css('display', 'block');
+  $('#workingcontent').css('display', 'block');
 };
 
 const hideWorkingArea = function () {
-  $('.workingcontent').css('display', 'none');
+  $('#workingcontent').css('display', 'none');
 };
 
 const signUpSuccess = (data) => {
