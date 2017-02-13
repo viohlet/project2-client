@@ -27,36 +27,30 @@ h1 {
   text-align: center;
 }
 
+.btn-logout {
+  width: 100%;
+  padding: 14px 20px;
+  text-align: left;
+}
+
+// .homebutton,
+// .myprojectsbutton,
+// #cambiopass,
+// .sign-out-btn {
+//   display: none;
+// }
+
+#homebuttoncss,
+#myprojectsbuttoncss,
+#modifypasswordcss,
+#sign-out {
+  display: none;
+}
+
 // .hiscreen {
 //   text-align: center;
 // }
 
-// #container {
-//   position: fixed;
-//   width: 340px;
-//   height: 240px;
-//   top: 50%;
-//   left: 50%;
-//   margin-top: -160px;
-//   margin-left: -170px;
-//   // margin-left: auto;
-//   // margin-right: auto;
-//   background-color: #E5E0DA;
-// }
-
-// #sign-in {
-//   margin: 0 auto;
-//   margin-top: 20px;
-//   font-size: 16px;
-// }
-//
-//
-// .signinplaceholder {
-//   display: inline-block;
-//   margin-left: 18px;
-//   // padding-top: 10px;
-//   font-size: 14px;
-// }
 
 // #loginbutton,
 // #signupbutton {

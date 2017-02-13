@@ -30,23 +30,27 @@
               <!-- <div class='homebutton'>
                 <button type="button" value ='button1' onclick='onHomeButton("welcome-message")' class="btn btn-link"> Home </button>
               </div> -->
-                <a class='homebutton' href='#' onclick='onHomeButton("welcome-message")'> Home </a>
+                <a class='homebutton' href='#' onclick='onHomeButton("welcome-message")' id="homebuttoncss"> Home </a>
               <!-- <input type='button' value ='button1' onclick='onHomeButton("welcome-message")'> -->
           </li>
           <li>
-                <a class='myprojectsbutton' href='#' onclick='onMyProjectsButton("workingcontent")'> My Projects </a>
+                <a class='myprojectsbutton' href='#' onclick='onMyProjectsButton("workingcontent")' id="myprojectsbuttoncss"> My Projects </a>
           </li>
           <li>
-              <a class='required-auth' href='#' data-toggle="modal" data-target='#log-in'>Sign in</a>
+              <a class='enter-required-auth' href='#' data-toggle="modal" data-target='#log-in'>Sign in</a>
           </li>
           <li>
-              <a class='required-auth' href='#' data-toggle="modal" data-target='#register'>Sign up</a>
+              <a class='enter-required-auth' href='#' data-toggle="modal" data-target='#register'>Sign up</a>
           </li>
           <li>
-              <a href='#' class='other-auth-settings' data-toggle="modal" data-target='#cambiopass'>Change password</a>
+              <a href='#' class='change-pass-auth' data-toggle="modal" data-target='#cambiopass' id="modifypasswordcss">Change password</a>
           </li>
-          <li>
-              <a href='#' class='other-auth-settings' id='sign-out'>Sign out</a>
+          <li class="sign-out-btn">
+              <form id="sign-out">
+                <fieldset>
+                  <button type="submit" class="btn btn-link btn-logout">Log out</button>
+                </fieldset>
+              </form>
           </li>
         </ul>
       </div>
@@ -55,7 +59,8 @@
 
 <!-- Change Password Modal -->
 
-    <div class = "byescreen">
+    <!-- <div class = "byescreen"> -->
+    <div class = "changepass-btn">
 
       <!-- <div class= "cambiopass"> -->
         <div class="modal fade" id="cambiopass" tabindex="-1" role="dialog" aria-labelledby="sign-in" aria-hidden="true">
@@ -69,7 +74,6 @@
                 <!-- <button type="button" class="newbtnstyle" style="float:right" data-toggle="modal"
                 data-target="#cambiopass">Change Password</button> -->
                 <form id="change-password">
-                    <!-- <legend>Changeyour Password</legend> -->
                     <!-- <input type="email" name="credentials[email]" placeholder="Your email"> -->
                     <input type="password" name="passwords[old]" placeholder="Old Password">
                     <input type="password" name="passwords[new]" placeholder="New Password">
@@ -83,15 +87,16 @@
           </div>
         </div>
 
-      </div>
 
-    <div>
-      <form id="sign-out">
-        <fieldset>
-          <button type="submit" name="submit" class="newbtnstyle" style="float:right">Log out</button>
-        </fieldset>
-      </form>
-    </div>
+      <!-- <div>
+        <form id="sign-out">
+          <fieldset>
+            <button type="submit" name="submit" class="newbtnstyle" style="float:right">Log out</button>
+          </fieldset>
+        </form>
+      </div> -->
+
+  </div>
 
     <div class = "title">
       <h1>User Stories Wizard</h1>
@@ -99,7 +104,7 @@
 
 <!-- hiscreen DIV -->
   <!-- Log-in Modal -->
-      <div class = "hiscreen">
+      <div class = "sign-in-sign-up-btns">
 
         <div class="modal fade" id="log-in" tabindex="-1" role="dialog" aria-labelledby="sign-in" aria-hidden="true">
           <div class="modal-dialog"  role="document">
@@ -119,8 +124,6 @@
             </div>
           </div>
         </div>
-
-      </div>
 
       <!-- Sign-up Modal -->
       <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
@@ -143,6 +146,7 @@
         </div>
       </div>
 
+    </div>
 
 
     <!-- End of hiscreen -->
@@ -163,8 +167,8 @@
       Website still under construction. Please visit soon.
     </div>
 
-    <div id = "workingcontent">
 
+    <div id = "workingcontent">
 
 <!-- Projects Dropdown -->
     <button type="button" class="editdeletebtns" aria-label="Left Align" data-toggle="collapse" data-target="#collapseadd" aria-expanded="false" aria-controls="collapseExamples">
