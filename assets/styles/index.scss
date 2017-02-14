@@ -2,7 +2,8 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 $fontstyle: 'Source Sans Pro', sans-serif;
-
+$white: #fff;
+$beige: #d8cfc7;
 
 html,
 body {
@@ -16,7 +17,7 @@ h1 {
 }
 
 .title {
-  color: #E5E0DA;
+  color: $beige;
   font-family: $fontstyle;
 }
 
@@ -28,17 +29,10 @@ h1 {
 }
 
 .btn-logout {
-  width: 100%;
   padding: 14px 20px;
   text-align: left;
+  width: 100%;
 }
-
-// .homebutton,
-// .myprojectsbutton,
-// #cambiopass,
-// .sign-out-btn {
-//   display: none;
-// }
 
 #homebuttoncss,
 #myprojectsbuttoncss,
@@ -47,56 +41,41 @@ h1 {
   display: none;
 }
 
-// .hiscreen {
-//   text-align: center;
-// }
-
-
-// #loginbutton,
-// #signupbutton {
-//   margin: 0 auto;
-// }
-
-// .byescreen {
-//   display: none;
-//   text-align: center;
-// }
-
 body {
-  background-image:
-  linear-gradient(
-    rgba(0, 0, 0, 0.45),
-    rgba(0, 0, 0, 0.45)
+  background-image: linear-gradient(
+
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
   ),
   url('cleandesk.jpg');
   background-size: cover;
-  font-family: $fontstyle
+  font-family: $fontstyle;
 }
 
 #message {
-  color: #ffffff;
-  text-align: center;
+  color: $white;
   font-size: 20px;
+  text-align: center;
 }
 
 .title-display {
-  color: #ffffff;
+  color: $white;
 }
 
-.myuserstories-subtitle {
-  color: #ffffff;
+.subtitles {
+  color: $beige;
 }
 
 #workingcontent {
-  width: 70%;
+  display: none;
   margin: 2% auto;
   text-align: justify;
-  display: none;
+  width: 70%;
 }
 
-// .hidden {
-//   display: none;
-// }
+#addustemplate {
+  color: $white;
+}
 
 #index {
   text-align: center;
