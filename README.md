@@ -66,6 +66,7 @@ for visiting my app!
 - Some Screenshots of my app's before and after look:
 
     - Old Look of my page (When meeting requirements was all that mattered)
-! [Imgur](http://i.imgur.com/JopXjv2.png)
+![Imgur](http://i.imgur.com/JopXjv2.png)
+
     - Makeover
-! [Imgur](http://i.imgur.com/xvCZte1.png)
+![Imgur](http://i.imgur.com/xvCZte1.png)
